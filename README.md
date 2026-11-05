@@ -17,7 +17,7 @@
 
 <p align="center">
   <img alt="Android" src="https://img.shields.io/badge/Android-APK-3DDC84?logo=android&logoColor=white">
-  <img alt="Version" src="https://img.shields.io/badge/version-4.1.1-blueviolet">
+  <img alt="Version" src="https://img.shields.io/badge/version-4.1.3-blueviolet">
   <img alt="Telegram" src="https://img.shields.io/badge/Telegram-@max__vibe-26A5E4?logo=telegram&logoColor=white">
 </p>
 

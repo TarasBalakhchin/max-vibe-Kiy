@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/dorofo/max-vibe-assets/main/ic_launcher_max_vibe.png" width="120" alt="MaxVibe Icon">
 </p>
 
-<h1 align="center">MaxVibe 4.1.1</h1>
+<h1 align="center">MaxVibe 4.1.3</h1>
 
 <p align="center">
   <strong>Мод на мессенджер MAX</strong> · Android APK<br>
@@ -27,7 +27,7 @@
 
 **MaxVibe (Макс Вайб)** — неофициальный мод мессенджера **MAX** для Android: тише, умнее и с контролем над тем, что о тебе видно снаружи.
 
-### ✨ Что нового в 4.1.1
+### ✨ Что нового в 4.1.3
 
 | Фича | Что изменилось |
 |------|----------------|
@@ -95,7 +95,7 @@
 
 **MaxVibe** is an unofficial **MAX Messenger** mod for Android: quieter presence, stronger privacy controls, and less telemetry noise.
 
-### ✨ What’s new in 4.1.1
+### ✨ What’s new in 4.1.3
 
 | Feature | What changed |
 |---------|--------------|

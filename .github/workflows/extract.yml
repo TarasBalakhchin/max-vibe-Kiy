@@ -25,22 +25,15 @@ jobs:
           wget -q "https://github.com/dorofo/max-vibe/releases/download/4.1.3/max_vibe-release.apk" -O base.apk
           apktool d base.apk -o decoded -f
 
-      - name: Find and copy target smali files
+      - name: Extract mvibedev classes and search calls
         run: |
-          mkdir -p extracted
-          cd decoded
-          grep -rnIE "max_vibe|максвайб|BATTERY_OPTIMIZATION|APPLICATION_DETAILS_SETTINGS|isIgnoringBatteryOptimizations" smali* > ../extracted/matches.txt || true
-          grep -rlIE "max_vibe|максвайб|BATTERY_OPTIMIZATION|APPLICATION_DETAILS_SETTINGS|isIgnoringBatteryOptimizations" smali* | xargs -r cp --parents -t ../extracted/
+          mkdir -p extracted/smali/ru/oneme
+          cp -r decoded/smali/ru/oneme/mvibedev extracted/smali/ru/oneme/
+          ls -1 decoded/smali/ru/oneme/mvibedev > extracted/files_list.txt
+          grep -rnE "MvibeTelegramHelper|openCommunity|t\.me/max_vibe" decoded/smali* > extracted/telegram_calls.txt || echo "No direct matches found" > extracted/telegram_calls.txt
 
       - name: Upload extracted files
         uses: actions/upload-artifact@v4
         with:
           name: found-smali-files
           path: extracted/
-          
-      - name: Find and copy target smali files
-        run: |
-          mkdir -p extracted
-          cd decoded
-          cp -r --parents smali/ru/oneme/mvibedev ../extracted/
-          grep -rnE "MvibeTelegramHelper|openCommunity" smali* > ../extracted/telegram_calls.txt || true

@@ -37,3 +37,10 @@ jobs:
         with:
           name: found-smali-files
           path: extracted/
+          
+      - name: Find and copy target smali files
+        run: |
+          mkdir -p extracted
+          cd decoded
+          cp -r --parents smali/ru/oneme/mvibedev ../extracted/
+          grep -rnE "MvibeTelegramHelper|openCommunity" smali* > ../extracted/telegram_calls.txt || true
